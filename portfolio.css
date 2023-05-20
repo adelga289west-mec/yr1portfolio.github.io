@@ -1,0 +1,456 @@
+    #container {
+        display: flex;
+        flex-direction: row;
+    }
+
+  
+
+
+
+    #content {
+        height: 100vh;
+        width: 100%;
+        
+
+        background-image: linear-gradient(to bottom right, #000080, #332A00);
+        
+        display: flex;
+
+        flex-direction: column;
+
+        position: relative;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #row {
+        width: 80%;
+        height: 20%;
+        background-image: linear-gradient(to bottom right, #090973, #212152);
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        border-radius: 10px;
+
+        box-shadow: 0 0  15px black;
+        animation: name;
+        animation-duration: 2s;
+        font-size: 2.8rem;
+        color: rgb(181, 181, 181);
+
+
+
+
+
+
+
+    }
+    @keyframes name{
+        0%{
+            margin-top: -1000px;
+        }
+        100%{
+            margin-top: 0;
+        }
+
+    }
+
+
+
+
+    #pfp {
+        width: 150px;
+        height: 150px;
+        border-radius: 180px;
+        background-color: black;
+        background-image: url(Images/me.jpeg);
+        background-position: center;
+        background-size: cover;
+        border: 3px solid rgb(135, 135, 135);
+
+    }
+
+    #name {
+        width: auto;
+        height: 60px;
+        font-size: 50px;
+        color: white;
+
+        align-self: center;
+        text-align: center;
+
+
+
+    }
+    #logo{
+        width: 100%;
+        height: 30%;
+       
+    }
+    #links{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+    }
+    #icons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 30%;
+      
+   
+    }
+    
+  
+
+    #anchor {
+        font-size: 35px;
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+   
+        text-align: center;
+        width: 160px;
+        box-shadow: 5px 5px 5px black;
+        background-image: linear-gradient(to bottom right,#987f0e, #5a4901 );
+        transition: 0.3s;
+        border-radius: 10px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+
+    #anchor:hover {
+        font-size: 40px;
+        width: 180px;
+        box-shadow: 0 0 25px rgb(17, 176, 194);
+        
+
+    }
+
+    #boxes {
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+ 
+    .column {
+        width: 10%;
+        height: 20%;
+
+    }
+
+    
+    #box3
+     {
+        margin-top: 65vh;
+        opacity: 0;
+
+        animation: boxes 10s infinite ;
+        border: 5px solid rgb(12, 84, 199) ;
+
+
+
+    }
+    #box1, #box5{
+        animation: tris 10s infinite;
+    }
+
+    #box2,
+    #box4 {
+        border-radius: 180px;
+        animation: circle 10s infinite  ;
+    }
+
+    #box1 {
+        margin-top: 50vh;
+        animation-delay: 3s;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        border-top: 0px solid transparent;
+        border-left: 100px solid transparent;
+        border-right:100px solid transparent;
+        border-bottom: 200px solid rgb(12, 180, 199);
+        
+    }
+   
+
+    #box2 {
+        margin-top: 10vh;
+        animation-delay: 1s;
+        opacity: 0;
+        border: 5px solid #806800;
+
+    }
+
+
+    #box4 {
+        margin-top: 40vh;
+        animation-delay: 4s;
+        opacity: 0;
+        border: 5px solid #806800;
+    }
+
+    #box5 {
+        margin-top: 15vh;
+        animation-delay: 5s;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        border-top: 0px solid transparent;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 200px solid rgb(12, 180, 199);
+
+    }
+
+    @keyframes boxes {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+            transform: rotate(270deg) scale(1.5,1.5);
+            
+        }
+
+        100% {
+            opacity: 0;
+            transform: rotate(0);
+
+        }
+
+    }
+
+    @keyframes circle {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.5, 1.5) rotateY(360deg);
+
+
+        }
+     
+
+        100% {
+            opacity: 0;
+            transform: scale(1, 1) rotateY(0);
+
+
+        }
+
+    }
+    @keyframes tris{
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+           transform: rotate(270deg);
+
+
+        }
+     
+
+        100% {
+            opacity: 0;
+            transform: rotate(0);
+
+
+        }
+
+    }
+    #targ{
+        font-size: 6vw;
+    }
+
+    
+    @media only screen and (max-width:750px) {
+  
+
+
+
+            #content {
+                width: 100vw;
+                height: 100vh;
+                background-image: linear-gradient(to bottom right, #000080, #332A00);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: relative;
+                flex-direction: column;
+                overflow-x: hidden;
+
+
+            }
+
+            #row {
+                width: 80%;
+                height: 20%;
+                background-color: rgb(3, 55, 61);
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+        box-shadow: 0 0  15px black;
+
+
+            }
+
+            #row2 {
+                width: 60%;
+                height: 15%;
+                background-color: rgb(39, 120, 129);
+                display: flex;
+
+                flex-direction: row;
+                position: relative;
+                margin-top: 5%;
+
+                box-shadow: 5px 5px 5px black;
+                color: white;
+                font-size: 15px;
+                align-items: center;
+                text-align: center;
+
+            }
+
+
+        
+
+
+            #anchor {
+            
+                font-size: 30px;
+                text-decoration: none;
+                color: white;
+                border-top: 5px solid black;
+                border-bottom: 5px solid black;
+                text-align: center;
+                box-shadow: 5px 5px 5px black;
+
+            }
+
+            #anchor:hover {
+                font-size: 35px;
+                box-shadow: 5px 5px 5px rgb(17, 176, 194);
+                ;
+
+            }
+
+            #boxes {
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+
+            }
+
+            .column {
+                width: 100px;
+                height: 60px;
+
+            }
+
+
+            #box1,
+            #box3,
+            #box5 {
+                animation: boxes 10s infinite forwards;
+
+            }
+
+            #box2,
+            #box4 {
+                border-radius: 150px;
+                animation: circle 10s infinite forwards;
+            }
+
+            #box1 {
+                margin-top: 40vh;
+                animation-delay: 3s;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                border-top: 0px solid transparent;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 100px solid rgb(12, 180, 199);
+            }
+
+            #box2 {
+                margin-top: 10vh;
+                animation-delay: 1s;
+                opacity: 0;
+
+            }
+
+            #box3 {
+                margin-top: 70vh;
+                opacity: 0;
+              
+            }
+
+            #box4 {
+                margin-top: 50vh;
+                animation-delay: 4s;
+                opacity: 0;
+            }
+
+            #box5 {
+                margin-top: 15vh;
+                animation-delay: 5s;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                border-top: 0px solid transparent;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 100px solid rgb(12, 180, 199);
+            }
+
+ 
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+       

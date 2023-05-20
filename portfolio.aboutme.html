@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            background-image: radial-gradient(white,#7e690d);
+        }
+        #left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            height: 80%;
+            border: 5px solid black;
+            padding-left: 10px;
+            padding-right: 10px;
+            animation: opacity;
+            animation-duration: 3s;
+            background-color: white;
+        }
+        @keyframes opacity{
+            0%{
+                filter: opacity(0);
+            }
+            100%{
+                filter: opacity(1);
+            }
+        }
+        #right{
+            width:30%;
+            height: 80%;
+            background-color: black;
+            overflow-x: auto;
+            display: flex;
+            align-items: center;
+            border: 5px solid black;
+
+
+          
+        
+        }
+        #right::-webkit-scrollbar{
+            display: none;
+        }
+        #me{
+            width: 100%;
+            height: 80%;
+                background-image: url(Images/me2.jpeg);
+               background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: flipme;
+            animation-duration: 1.5s;
+            transform: rotateY(180deg);
+            border-image:5px solid #6A5706 ;
+
+        }
+        @keyframes flipme{
+            0%{margin-left: 1500px; transform: rotateY(180deg);}
+            60%{transform: rotateY(0);}
+            100%{margin-left: 0; }
+        }
+        #title{
+            animation-duration: 4s;
+            font-size: 30px;
+            color: #6A5706;
+        }
+        @keyframes title{
+            0%{margin-top:-500px}
+            100%{margin-top: 0;}
+        }
+        #links{
+            margin: auto;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+      
+        .anchor {
+            display: flex;
+            align-items: center;
+            height: 40px;
+
+font-size: 1.8vw;
+text-decoration: none;
+color: white;
+text-align: center;
+width: auto;
+box-shadow: 0 0 15px black;
+transition: 0.3s;
+background-image: linear-gradient(to bottom right,#7e690d, #5a4901 );
+padding: 5px;
+font-family: 'Source Code Pro', monospace;
+
+
+
+}
+.anchor:hover {
+            font-size: 30px;
+            box-shadow: 0 0 25px rgb(17, 176, 194);
+
+        }
+        #about{
+            font-size: 1.5vw;
+            font-family: 'Source Code Pro', monospace;
+
+        }
+        #dios{
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+
+            font-size: 3vw;
+            font-weight: bolder;
+            color: #6A5706;
+            margin: auto;
+
+        }
+        #icons{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #contact{
+            text-align: center;
+            color: #6A5706;
+            font-size: 1.5vw;
+
+        }
+        @media only screen and (max-width:800px){
+            #container{
+                flex-direction: column-reverse;
+            }
+            #left{
+                width: 80%;
+                height: 50%;
+                border: none;
+                padding: 0;
+                border-bottom: 5px solid black;
+                border-right: 5px solid black;
+                border-left: 5px solid black;
+            }
+            #about{
+                font-size: 1.8vw;
+            }
+            #right{
+                justify-content: center;
+                width: 80%;
+                height: 40%;
+                border: none;
+                border-top: 5px solid black;
+                border-right: 5px solid black;
+                border-left: 5px solid black;
+            }
+            #me{
+                width: 70%;
+                background-size: cover;
+                background-position: center;
+            }#title{
+                font-size: 5vw;
+            }
+        
+
+        }
+
+
+
+
+     
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="title"><h1>About Me</h1></div>
+            <br>
+            <p id="about">Hi, my name is Adrian Delgado. I was born in Whittier, California before I moved to where I currently live being Tolleson, Arizona. Growing up, I had a increasing love and interest for all things technology and especially games. My goal as a beginner coder is to create for myself a promising future with tech.  </p>
+            <br>
+            <p id="dios">"Con Dios, Todo Se Puede"</p>
+            <p id="contact">Contact me: adelga289@west-mec.org</p>
+            <div id="links">
+            <a class="anchor" href="Portfolio3.html">Home Page </a>
+            <a class="anchor" href="Portfolio.myprojects2.html">My Projects</a>
+            </div>
+            <br>
+            <div id="icons">
+                <a href="https://github.com/adelga289west-mec">
+                    <i class="fa-brands fa-github fa-2xl" style="color: #665405;"></i>
+
+                </a>
+                <a href="https://www.instagram.com/adrian.d_336?utm_source=qr">
+                    <i class="fa-brands fa-instagram fa-2xl" style="color: #665405;"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-linkedin fa-2xl" style="color: #665405;"></i>
+                </a>
+
+            </div>
+        </div>
+        <div id="right">
+            <div id="me"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
